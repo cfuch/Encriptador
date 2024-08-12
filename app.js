@@ -1,32 +1,34 @@
+// Selección de los elementos del DOM
 const burro = document.querySelector(".encriptador__ingreso__texto__box__text");
 const textoResultado = document.querySelector(".box__text__encriptado_resuelto");
+const boxTextImg = document.getElementById("imagen_de_fondo");
+const boxTextText = document.querySelector(".box__resultado__textos");
+const botonCopiar = document.querySelector(".box__text__resuleto__Boton_copiar");
 
-// La letra "e" es convertida para "enter"
-// La letra "i" es convertida para "imes"
-// La letra "a" es convertida para "ai"
-// La letra "o" es convertida para "ober"
-// La letra "u" es convertida para "ufat"
-
+// Función para encriptar texto
 function btnEncriptar() {
     const textoEncriptar = encriptar(burro.value);
     textoResultado.value = textoEncriptar;
     burro.value = "";
+    boxTextImg.style.display = "none";  // Ocultar imagen de fondo
+    textoResultado.style.display = "block";  // Mostrar área de texto encriptado
+    boxTextText.style.display = "none";  // Ocultar texto de resultado
+    botonCopiar.style.display = "block";  // Mostrar botón de copiar
 }
 
+// Función que realiza los reemplazos de letras para encriptar el texto
 function encriptar(stringEncriptado) {
     stringEncriptado = stringEncriptado.toLowerCase();
-    
-    // Reemplazar cada letra específica con su correspondiente encriptación
     stringEncriptado = stringEncriptado.replaceAll("e", "enter")
-                                      .replaceAll("i", "imes")
-                                      .replaceAll("a", "ai")
-                                      .replaceAll("o", "ober")
-                                      .replaceAll("u", "ufat");
-    
+                                       .replaceAll("i", "imes")
+                                       .replaceAll("a", "ai")
+                                       .replaceAll("o", "ober")
+                                       .replaceAll("u", "ufat");
     return stringEncriptado;
 }
 
-// Ejemplo para llamar a la función en un botón
-document.querySelector("button").addEventListener("click", btnEncriptar);
+// Añadir el evento de clic al botón de encriptar
+document.querySelector(".encriptador__ingreso__texto__Boton_encriptar").addEventListener("click", btnEncriptar);
+
 
 
