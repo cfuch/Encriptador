@@ -1,6 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root{
     --color-lightBlue: #f3f5fc;
@@ -9,7 +8,7 @@
     --color-white:#ffffff;
     --color-darkGray: #495057;
     --color-black:#000000;
-    --color-shadow: 0rem 0.75rem 1.25rem #c7c7c7;
+    --color-shadow: 10px 10px 5px #c7c7c7;
     --fuente-Inter:"Inter", sans-serif;
    
 
@@ -79,7 +78,7 @@ body {
 .encriptador__ingreso__texto__botones{
     display: flex;
     align-items: center;
-    width: 37.5rem;
+    width: 100%;
     gap: 5%;
     
 }
@@ -116,8 +115,6 @@ body {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   width: 25rem;
-   height: 59rem;
    background-color: var(--color-white);
    border-radius: 32px;
    box-shadow: var(--color-shadow);
@@ -128,8 +125,7 @@ body {
 
 .box__resultado img{
     display: flex;
-    width: auto;
-    padding: 0% 9% 0% 9%;
+    padding: 20% 9% 0% 9%;
 
 }
 
@@ -137,8 +133,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-   
-   
+    padding-bottom: 50%;
    
 }
 
@@ -168,8 +163,6 @@ body {
     display: none;
     flex-direction: column;
     align-items: center;
-    width: 25rem;
-    height: 59rem;
     background-color: var(--color-white);
     border-radius: 32px;
     box-shadow: var(--color-shadow);
@@ -187,7 +180,6 @@ body {
     color: var(--color-darkBlue);
     font-weight: 400;
     padding-top: 20%;
-    height: 100%;
     
 }
 
@@ -197,12 +189,12 @@ body {
     display: none;
     color: var(--color-darkBlue);
     background-color: var(--color-white) ;
-    width: 21rem;
     border-radius: 24px;
     font-family: var(--fuente-Inter);
     font-weight: 400;
     font-size: 1rem;
-    padding: 6%;
+    width: 100%;
+    padding: 3% 10% 3% 10%;
     justify-content: center;
     
     
@@ -212,12 +204,11 @@ body {
 .pie__pagina{
     color: var(--color-white);
     background-color: var(--color-darkBlue);
-    font-family: var(--fuente-Inter);
+    font-family: "Platypi", sans-serif;
     font-weight: 400;
     font-size: 1rem;
-    padding: 2rem;
+    padding: 1%;
     text-align: center;
-
 }
 
 @media screen and (max-width: 770px) {
@@ -230,17 +221,10 @@ body {
 
     }
 
-    .encriptador__ingreso__texto__botones{
-        width: 100%;
-
-    }
    
     .box__resultado {
-        width: 100%;
-        margin-left: 0%;
         margin-top: 5%;
-        height: 100%;
-
+        
     }
 
     .box__resultado img{
@@ -248,38 +232,17 @@ body {
 
     }
 
-    .box__resultado__textos{
-        width: 100%;
-        padding: 5%;
-    }
-
-    .box__text_encriptado{
-        width: 100%;
-    
-    }
-
-    .box__text__resuelto__Boton_copiar{
-        width: 100%;
-    }
+   
    
 }
 
 @media screen and (max-width: 375px){
 
-    .encriptador__ingreso__texto__box__text{
-        height: 100%;
-    }
+  
     .encriptador__ingreso__texto__botones{
         flex-direction: column;
-        width:100%;
+       
     }
 
-    .box__resultado{
-        width: 100%;
-    }
-
-    .box__text__resuelto__Boton_copiar{
-        width: 100%;
-    }
-
+  
 }
