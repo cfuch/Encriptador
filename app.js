@@ -14,15 +14,34 @@ botonEncriptar.addEventListener("click", btnEncriptar);
 botonDesencriptar.addEventListener("click", btnDesencriptar);
 botonCopiar.addEventListener("click", btnCopiar);
 
+// Validacion de entrada de texto
+function validarEntrada() {
+    if (inputText.value.trim() === "") {
+        alert("Por favor, ingresa un texto.");
+        return false;
+    }
+    // Validacion de restriccion de ingreso de texto
+    if (!validarTexto(inputText.value)) {
+        alert("Por favor, ingresa solo letras minúsculas sin acentos.");
+        return false;
+    }
+    return true;
+}
+
+// Funcion de validacion de minusculas
+function validarTexto(texto) {
+    const regex = /^[a-z\s]*$/; // Solo letras minúsculas y espacios
+    return regex.test(texto);
+}
 
 // Función para encriptar texto
 function btnEncriptar() {
+    if (!validarEntrada()) return;
     const textoEncriptar = encriptar(inputText.value);
     textoResultado.value = textoEncriptar;
     inputText.value = "";
     mostrarResultado();
 }
-
 // Función que realiza los reemplazos de letras para encriptar el texto
 function encriptar(stringEncriptado) {
     return stringEncriptado.toLowerCase()
@@ -37,6 +56,7 @@ function encriptar(stringEncriptado) {
 
 // Función para desencriptar texto
 function btnDesencriptar() {
+    if (!validarEntrada()) return;
     const textoDesencriptar = desencriptar(inputText.value);
     textoResultado.value = textoDesencriptar;
     inputText.value = "";
@@ -76,9 +96,4 @@ function mostrarResultado() {
         .catch(err => {
             console.error('Error al copiar el texto: ', err);
         });
-}
-
-function validarTexto(texto) {
-    const regex = /^[a-z\s]*$/; // Solo letras minúsculas y espacios
-    return regex.test(texto);
 }
