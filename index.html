@@ -11,6 +11,7 @@
         <img src="imagenes/Group-3.png" alt="logo Alura" width="31px" height="51px" class="logo__alura">
     </header>
     <main class="encriptador">
+        <!-- Bloque de ingreso de texto -->
         <div class="encriptador__ingreso__texto">
             <textarea class="encriptador__ingreso__texto__box__text" 
                 placeholder="Ingrese texto aquí"></textarea>
@@ -21,17 +22,21 @@
                 <p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="encriptador__ingreso__texto__botones">
+                <!-- La funcion de los botones se llama desde JS -->
                 <button class="encriptador__ingreso__texto__Boton_encriptar">Encriptar</button>
                 <button class="encriptador__ingreso__texto__Boton_desencriptar">Desencriptar</button>
             </div>
         </div>
+    <!-- Bloque donde se mostrara el texto resultado -->
+        <!-- Imagen y texto incial -->
         <div class="box__resultado">
-            <img id="imagen_de_fondo" src="imagenes/Muneco.png" alt="imagen_de_fondo">
+            <img id="imagen_de_fondo" src="imagenes/Muneco.png" alt="ilustracion de fondo">
             <div class="box__resultado__textos">
                 <p class="box__resultado__texto1_destacado"> Ningún mensaje fue encontrado</p>
                 <p class="box__resultado__texto2">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div> 
         </div>
+        <!-- Texto resultado -->
         <div class="box__text_encriptado">
             <textarea name="box__text__resuelto" class="box__text__encriptado_resuelto"></textarea>
             <button class="box__text__resuelto__Boton_copiar">Copiar</button>
