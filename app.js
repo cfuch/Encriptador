@@ -28,9 +28,10 @@ function validarEntrada() {
     return true;
 }
 
-// Funcion de validacion de minusculas
+// Función de validación de minúsculas con signos de puntuación
 function validarTexto(texto) {
-    const regex = /^[a-z\s]*$/; // Solo letras minúsculas y espacios
+    // La regex incluye letras minúsculas, espacios y signos de puntuación comunes
+    const regex = /^[a-z\s.,;:!?()¿¡'-]*$/; 
     return regex.test(texto);
 }
 
