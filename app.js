@@ -31,7 +31,7 @@ function validarEntrada() {
 // Función de validación de minúsculas con signos de puntuación
 function validarTexto(texto) {
     // La regex incluye letras minúsculas, espacios y signos de puntuación comunes
-    const regex = /^[a-z\s.,;:!?()¿¡'-]*$/; 
+    const regex = /^[a-z\s.,;:!?()¿¡ñ'-]*$/; 
     return regex.test(texto);
 }
 
